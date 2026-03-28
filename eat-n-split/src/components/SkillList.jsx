@@ -1,12 +1,17 @@
 import Skill from './Skill'
+import { SKILLS_DATA } from '../constants/skills'
 
 const SkillList = () => {
   return (
     <div className='skill-list'>
-      <Skill skill='React' emoji='💪' color='blue' />
-      <Skill skill='HTML+CSS' emoji='💪' color='orange' />
-      <Skill skill='JavaScript' emoji='💪' color='yellow' />
-      <Skill skill='Svelte' emoji='👶' color='orangered' />
+      {SKILLS_DATA.map((item, index) => (
+        <Skill
+          key={index}
+          skill={item.skill}
+          emoji={item.emoji}
+          color={item.color}
+        />
+      ))}
     </div>
   )
 }
