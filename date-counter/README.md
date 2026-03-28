@@ -1,16 +1,73 @@
-# React + Vite
+# Date Counter 📅
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React practice project that calculates and displays dates based on a counter offset.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dynamic Step Control**: Adjust the step size (increment/decrement)
+- **Count Adjustment**: Add or subtract counts using the step value
+- **Date Calculation**: Automatically calculates dates relative to a base date (June 21, 2027)
+- **Smart Date Display**: Shows different messages based on count:
+  - "Today is" when count is 0
+  - "X days from today is" when count is positive
+  - "X days ago was" when count is negative
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── App.jsx          # Main app component
+├── App.css          # App styles
+├── App.css          # Global styles
+├── main.jsx         # React entry point
+└── component/
+    └── Counter.jsx  # Counter component with date logic
+```
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19.2.4** - UI library
+- **Vite 8.0.1** - Build tool
+- **ESLint** - Code quality
+
+## Getting Started
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Opens the app in development mode with hot reload.
+
+### Build
+
+```bash
+npm run build
+```
+
+Creates an optimized production build.
+
+## How to Use
+
+1. Use the step buttons (`-` / `+`) to adjust the step size
+2. Use the count buttons (`-` / `+`) to change the count by the step value
+3. The date display automatically updates to show dates relative to the base date
+
+## Learning Concepts
+
+- React Hooks (`useState`)
+- Component composition
+- Date manipulation with JavaScript `Date` object
+- Conditional rendering
+- Event handling
+
+## Author
+
+Built as a React practice project 🚀
